@@ -22,6 +22,7 @@ module.exports = function (api) {
           components: ["tamagui"],
           config: "./tamagui.config.js",
           logTimings: true,
+          disableExtraction: false
         },
       ],
       [

@@ -1,4 +1,4 @@
-import { Factory } from "native-base";
+import { Factory, Text } from "native-base";
 import React from "react";
 import { Pressable } from "react-native";
 import { COUNT } from "../../utils";
@@ -70,7 +70,7 @@ const NativeBase = () => {
           _focus={{
             bg: "violet.700",
           }}
-        />
+        ><Text>Button</Text></Button>
       ))}
     </>
   );

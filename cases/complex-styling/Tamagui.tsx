@@ -1,4 +1,4 @@
-import { styled } from "tamagui";
+import { Text, styled } from "tamagui";
 import React from "react";
 import { COUNT } from "../../utils";
 import { Pressable } from "react-native";
@@ -65,7 +65,7 @@ const Tamagui = () => {
           focusStyle={{
             bc: "$purple8Light",
           }}
-        />
+        ><Text>Button</Text></Button>
       ))}
     </>
   );

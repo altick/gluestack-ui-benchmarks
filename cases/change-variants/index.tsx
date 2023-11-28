@@ -8,6 +8,7 @@ import NativeBase from "./NativeBase";
 import Tamagui from "./Tamagui";
 import TimedRender from "../../components/TimedRender";
 import StyledComponents from "./styled-components";
+import ReactNativePaper from "./ReactNativePaper";
 
 function ChangeVariants() {
   const [styleType, setStyleType] = useState(undefined);
@@ -29,6 +30,8 @@ function ChangeVariants() {
         return <NativeBase toggleVariant={toggleVariant} />;
       case "Styled Component":
         return <StyledComponents toggleVariant={toggleVariant} />;
+      case "React Native Paper":
+        return <ReactNativePaper />;
       default:
         return null;
     }
@@ -37,6 +40,7 @@ function ChangeVariants() {
     <View style={styles.container}>
       <Text style={styles.text}>Tap a style library to start rendering</Text>
       <Button title="React Native" onPress={onStyleTypePress("React Native")} />
+      <Button title="React Native Paper" onPress={onStyleTypePress("React Native Paper")} />
       <Button title="gluestack" onPress={onStyleTypePress("gluestack")} />
       <Button title="Tamagui" onPress={onStyleTypePress("Tamagui")} />
       <Button title="NativeBase" onPress={onStyleTypePress("NativeBase")} />

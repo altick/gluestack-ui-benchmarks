@@ -13,6 +13,7 @@ import { TamaguiProvider } from "tamagui";
 import { NativeBaseProvider } from "native-base";
 import { GluestackUIProvider } from "@gluestack-ui/themed";
 import { config } from "./gluestack-ui.config";
+import { PaperProvider } from "react-native-paper"
 
 const Stack = createNativeStackNavigator();
 
@@ -30,6 +31,7 @@ export default function App() {
     <NativeBaseProvider>
       <GluestackUIProvider config={config}>
         <TamaguiProvider config={TMConfig}>
+          <PaperProvider>
           <NavigationProvider>
             <Stack.Navigator initialRouteName="home">
               <Stack.Screen
@@ -69,6 +71,7 @@ export default function App() {
               />
             </Stack.Navigator>
           </NavigationProvider>
+          </PaperProvider>
         </TamaguiProvider>
       </GluestackUIProvider>
     </NativeBaseProvider>

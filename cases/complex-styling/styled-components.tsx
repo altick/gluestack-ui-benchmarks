@@ -5,7 +5,7 @@ const StyledComponents = () => {
   return (
     <>
       {new Array(COUNT).fill(0).map((_, i) => (
-        <Button key={i} $variant="solid" />
+        <Button key={i} $variant="solid"><Text>Button</Text></Button>
       ))}
     </>
   );
@@ -56,3 +56,7 @@ const Button = styled.Pressable<{
   ...(props.$variant === "solid" ? ButtonVariants.variants["solid"] : {}),
   ...(props.$variant === "outlined" ? ButtonVariants.variants["outlined"] : {}),
 }));
+
+const Text = styled.Text((props) => ({
+  
+}))

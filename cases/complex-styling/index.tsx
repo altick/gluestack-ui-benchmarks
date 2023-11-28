@@ -8,6 +8,7 @@ import NativeBase from "./NativeBase";
 import Tamagui from "./Tamagui";
 import TimedRender from "../../components/TimedRender";
 import StyledComponents from "./styled-components";
+import ReactNativePaper from "./ReactNativePaper";
 
 function ComplexStyling() {
   const [styleType, setStyleType] = useState(undefined);
@@ -28,6 +29,8 @@ function ComplexStyling() {
         return <NativeBase />;
       case "Styled Component":
         return <StyledComponents />;
+      case "React Native Paper":
+        return <ReactNativePaper />;
       default:
         return null;
     }
@@ -36,6 +39,7 @@ function ComplexStyling() {
     <View style={styles.container}>
       <Text style={styles.text}>Tap a style library to start rendering</Text>
       <Button title="React Native" onPress={onStyleTypePress("React Native")} />
+      <Button title="React Native Paper" onPress={onStyleTypePress("React Native Paper")} />
       <Button title="gluestack" onPress={onStyleTypePress("gluestack")} />
       <Button title="Tamagui" onPress={onStyleTypePress("Tamagui")} />
       <Button title="NativeBase" onPress={onStyleTypePress("NativeBase")} />

@@ -1,12 +1,13 @@
 import React from "react";
 import { Pressable, StyleSheet } from "react-native";
 import { COUNT } from "../../utils";
+import { Text } from "react-native";
 
 const ReactNative = () => {
   return (
     <>
       {new Array(COUNT).fill(0).map((_, k) => (
-        <Pressable key={k} style={[styles.box, styles.solid]} />
+        <Pressable key={k} style={[styles.box, styles.solid]}><Text>Button</Text></Pressable>
       ))}
     </>
   );
